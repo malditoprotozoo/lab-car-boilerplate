@@ -3,6 +3,7 @@ etiquetas semánticas */
 
 body {
   line-height: 1;
+  overflow: hidden;
 }
 
 /* Algunos colores que estaré usando
@@ -67,6 +68,16 @@ columnas */
   border: 1px solid black;
 }
 
+.sidelines {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.line {
+  width: 30%;
+  height: 1px;
+}
+
 /* Posiciones */
 
 .vcenter {
@@ -77,6 +88,10 @@ columnas */
 .hcenter {
   display: flex;
   justify-content: center;
+}
+
+.hright {
+  justify-content: flex-end;
 }
 
 /* Clase que usaré para esconder y visibilizar items */
@@ -124,11 +139,22 @@ columnas */
   margin-bottom: 0;
 }
 
+#logo-inside {
+  height: 1.2em;
+  margin-bottom: -1px;
+}
+
+#travel {
+  display: inline-block;
+}
+
 /* Modificaciones para mejorar la experiencia responsive
 que no vienen incluidas en el framework */
 
 @media (max-width: 1024px) {
+
   #navbar-items {
     display: none;
   }
+
 }
