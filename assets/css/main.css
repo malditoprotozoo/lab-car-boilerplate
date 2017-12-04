@@ -1,0 +1,134 @@
+/* Cambiando algunos detalles de las 
+etiquetas semánticas */
+
+body {
+  line-height: 1;
+}
+
+/* Algunos colores que estaré usando
+y que no están incluidos en el framework */
+
+.white-bg {
+  background-color: white;
+}
+
+.lab-yellow-bg {
+  background-color: #F7B617;
+}
+
+.dark-grey-bg {
+  background-color: #2B2B2B;
+}
+
+.dark-grey-text a {
+  color: #2B2B2B;
+}
+
+/* Tamaños que ocuparé para el sitio */
+
+.basis-height {
+  height: 15em;
+}
+
+.half-basis-height {
+  height: 7.5em;
+}
+
+.double-height {
+  height: 30em;
+}
+
+.triple-height {
+  height: 45em;
+}
+
+.cuadruple-height {
+  height: 60em;
+}
+
+/* Tamaños en porcentaje */
+
+.twenty-percent-height {
+  height: 20%;
+}
+
+.sixty-percent-height {
+  height: 60%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+/* Etiqueta temporal para ver la ubicación de las 
+columnas */
+
+.column {
+  border: 1px solid black;
+}
+
+/* Posiciones */
+
+.vcenter {
+  display: flex;
+  align-items: center;
+}
+
+.hcenter {
+  display: flex;
+  justify-content: center;
+}
+
+/* Clase que usaré para esconder y visibilizar items */
+
+.invisible {
+  display: none;
+}
+
+/* Modificaciones a IDs específicos */
+
+#navbar {
+  -webkit-transition:  all .35s;
+  transition:  all .35s;
+}
+
+#navbar.shrink {
+  height: auto;
+  background-color: black;
+}
+
+.shrink a {
+  color: white;
+}
+
+#header {
+  margin-top: 7.5em;
+  background-image: url("../images/taxi.jpg");
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+#register {
+  padding: 2.5em;
+}
+
+#drive {
+  background-image: url('../images/conduce.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#footer {
+  margin-bottom: 0;
+}
+
+/* Modificaciones para mejorar la experiencia responsive
+que no vienen incluidas en el framework */
+
+@media (max-width: 1024px) {
+  #navbar-items {
+    display: none;
+  }
+}
