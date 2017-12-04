@@ -11,9 +11,9 @@
     <!-- Mis estilos -->
     <link rel="stylesheet" href="assets/css/main.css">
   </head>
-  <body>
+  <body class="is-clipped">
     <!-- Barra de navegación fija -->
-    <nav class="navbar is-fixed-top white-bg half-basis-height" id="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-fixed-top white-bg padding-both-small" id="navbar" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-start">
           <div class="navbar-item">
@@ -23,7 +23,7 @@
             </div>
           </div>
         </div>
-        <div class="navbar-end dark-grey-text" id="navbar-items">
+        <div class="navbar-end dark-grey-text is-hidden-touch" id="navbar-items">
           <div class="navbar-item">
             <a href="#">Viaja</a>
           </div>
@@ -37,8 +37,8 @@
       </div>
     </nav>
     <!-- Header, en donde el usuario puede registrarse -->
-    <header class="columns triple-height vcenter hright" id="header">
-      <div class="column is-two-fifths lab-yellow-bg has-text-white" id="register">
+    <header class="columns hright padding-both-large" id="header">
+      <div class="column is-two-fifths lab-yellow-bg has-text-white padding-large" id="register">
         <div class="columns">
           <div class="column">
             <h2 class="is-size-3 has-text-weight-semibold">Disfruta del viaje</h2>
@@ -47,7 +47,7 @@
         </div>
         <div class="columns">
           <div class="column">
-            <h3 class="is-size-4" id="travel">Viaja con </h3>
+            <h3 class="is-size-4 is-inline-block">Viaja con </h3>
           <img src="assets/images/logoBlanco.png" alt="" id="logo-inside">
           </div>
             </div>
@@ -71,13 +71,40 @@
       </div>
     </header>
     <!-- Llamado a descargar la app -->
-    <section class="columns double-height lab-yellow-bg"></section>
+    <section id="travel" class="columns lab-yellow-bg padding-large hleft has-text-white">
+      <div class="column is-four-fifths padding-large">
+        <div class="columns">
+          <div class="column">
+            <figure id="iPhone">
+              <img src="assets/images/iPhone6Plus.png" alt="">
+            </figure>
+          </div>
+          <div class="column padding-large">
+            <div class="columns">
+              <div class="column">
+                <h3 class="is-size-4 has-text-weight-semibold">Descarga la nueva app</h3>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <p class="is-size-5">La versión actualizada de LabCar está llena de nuevas funciones para llegar a dónde quieras aún más fácil y rápido.</p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column">
+                <p class="is-size-5">Con sólo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente dónde ir.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- Conduce -->
-    <section class="columns double-height" id="drive"></section>
+    <section class="columns" id="drive"></section>
     <!-- Tarifas -->
-    <section class="columns double-height lab-yellow-bg"></section>
+    <section class="columns lab-yellow-bg"></section>
     <!-- Footer, duh -->
-    <footer id="footer" class="columns dark-grey-bg triple-height"></footer>
+    <footer id="footer" class="columns dark-grey-bg"></footer>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.js"></script>

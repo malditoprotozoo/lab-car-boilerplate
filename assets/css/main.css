@@ -3,7 +3,6 @@ etiquetas semánticas */
 
 body {
   line-height: 1;
-  overflow: hidden;
 }
 
 /* Algunos colores que estaré usando
@@ -25,48 +24,14 @@ y que no están incluidos en el framework */
   color: #2B2B2B;
 }
 
-/* Tamaños que ocuparé para el sitio */
-
-.basis-height {
-  height: 15em;
-}
-
-.half-basis-height {
-  height: 7.5em;
-}
-
-.double-height {
-  height: 30em;
-}
-
-.triple-height {
-  height: 45em;
-}
-
-.cuadruple-height {
-  height: 60em;
-}
-
-/* Tamaños en porcentaje */
-
-.twenty-percent-height {
-  height: 20%;
-}
-
-.sixty-percent-height {
-  height: 60%;
-}
-
-.full-height {
-  height: 100%;
-}
-
 /* Etiqueta temporal para ver la ubicación de las 
 columnas */
 
-.column {
+/* .column {
   border: 1px solid black;
-}
+} */
+
+/* Líneas al lado del texto */
 
 .sidelines {
   margin-left: 5px;
@@ -94,7 +59,43 @@ columnas */
   justify-content: flex-end;
 }
 
-/* Clase que usaré para esconder y visibilizar items */
+.hleft {
+  justify-content: flex-start;
+}
+
+/* Padding y márgenes */
+
+.padding-both-small {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.padding-top-small {
+  padding-top: 2em;
+}
+
+.padding-bottom-small {
+  padding-bottom: 2em;
+}
+
+.padding-both-large {
+  padding-top: 10em;
+  padding-bottom: 10em;
+}
+
+.padding-top-large {
+  padding-top: 10em;
+}
+
+.padding-bottom-large {
+  padding-bottom: 10em;
+}
+
+.padding-large {
+  padding: 2.5em;
+}
+
+/* Invisibiliza elementos */
 
 .invisible {
   display: none;
@@ -103,8 +104,8 @@ columnas */
 /* Modificaciones a IDs específicos */
 
 #navbar {
-  -webkit-transition:  all .35s;
-  transition:  all .35s;
+  -webkit-transition:  all .3s;
+  transition:  all .3s;
 }
 
 #navbar.shrink {
@@ -117,15 +118,12 @@ columnas */
 }
 
 #header {
-  margin-top: 7.5em;
   background-image: url("../images/taxi.jpg");
   background-size: cover;
   background-position: center bottom;
   background-repeat: no-repeat;
-}
-
-#register {
-  padding: 2.5em;
+  -webkit-transition:  all .3s;
+  transition:  all .3s;
 }
 
 #drive {
@@ -142,19 +140,11 @@ columnas */
 #logo-inside {
   height: 1.2em;
   margin-bottom: -1px;
+  margin-left: 3px;
 }
 
 #travel {
-  display: inline-block;
+  padding-left: 0;
 }
-
 /* Modificaciones para mejorar la experiencia responsive
 que no vienen incluidas en el framework */
-
-@media (max-width: 1024px) {
-
-  #navbar-items {
-    display: none;
-  }
-
-}
