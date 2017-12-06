@@ -33,7 +33,30 @@ $(window).scroll(function() {
 
 /* Abre el modal de registro */
 $(document).ready(function(){
-    $("#register-btn").click(function(){
-        $("#register-modal").modal();
+  $("#login-btn").click(function(){
+    $("#login-modal").modal();
+      $("#login-modal").modal({
+        fadeDuration: 250
+      });
     });
 });
+
+$(document).ready(function(){
+  $("#register-btn").click(function(){
+    $("#register-modal").modal();
+      $("#register-modal").modal({
+        fadeDuration: 250
+      });
+    });
+});
+
+$(document).ready(function(){
+  $("#login-link").click(function(){
+    $("#login-modal").modal();
+      $("#login-modal").modal({
+        fadeDuration: 250
+      });
+    });
+});
+
+$.modal.close();

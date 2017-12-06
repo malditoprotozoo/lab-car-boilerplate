@@ -13,6 +13,10 @@ a:hover {
   color: #F7B617!important;
 }
 
+.lab-yellow-bg a:hover {
+  color: black!important;
+}
+
 /* Algunos colores que estaré usando
 y que no están incluidos en el framework */
 
@@ -40,16 +44,16 @@ y que no están incluidos en el framework */
   border: 1px solid white;
 }
 
-.input::-webkit-input-placeholder {  
+.transparent.input::-webkit-input-placeholder {  
   color: white; 
 } 
-.input::-moz-placeholder {   
+.transparent.input::-moz-placeholder {   
   color: white; 
 } 
-.input:-ms-input-placeholder {    
+.transparent.input:-ms-input-placeholder {    
   color: white;
 } 
-.input:-moz-placeholder {    
+.transparent.input:-moz-placeholder {    
   color: white; 
 }
 
@@ -267,6 +271,16 @@ columnas */
 #nav-burger {
   width: auto;
   height: auto;
+}
+
+.jquery-modal {
+  z-index: 1001!important;
+}
+
+.modal {
+  overflow: visible;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
 }
 
 /* Modificaciones para mejorar la experiencia responsive
