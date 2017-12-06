@@ -205,6 +205,11 @@ columnas */
   color: white;
 }
 
+#nav-items-big {
+  -webkit-transition:opacity 1s linear;
+  transition:opacity 1s linear;
+}
+
 #header {
   background-image: url("../images/taxi.jpg");
   background-size: cover;
@@ -298,6 +303,17 @@ que no vienen incluidas en el framework */
 
   #drive {
     padding-bottom: 10em;
+  }
+
+}
+
+@media screen and (max-width: 1023px) {
+  
+  .invisible-touch {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
   }
 
 }

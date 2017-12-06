@@ -39,7 +39,7 @@ $(window).scroll(function() {
 
 $(document).ready(function() {
   $("#nav-burger").click(function() {
-    $("#nav-items-big").toggleClass("is-hidden-touch");
+    $("#nav-items-big").toggleClass("invisible-touch");
   })
 });
 
