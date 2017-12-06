@@ -10,25 +10,27 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
     <!-- Mis estilos -->
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body class="is-clipped">
     <!-- Barra de navegación fija -->
-    <nav class="navbar is-fixed-top white-bg padding-both-small" id="navbar" role="navigation" aria-label="main navigation">
+    <nav id="navbar" class="navbar is-fixed-top white-bg padding-both-small" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-start">
           <div class="navbar-item">
             <div class="navbar-brand vcenter">
               <a href="index.html"><img src="assets/images/logoForma.png" alt="" id="logo1"></a>
               <a href="index.html"><img src="assets/images/logoBlanco.png" alt="" id="logo2" class="invisible"></a>
+              <span id="nav-burger" class="fa fa-bars navbar-burger is-hidden-desktop"></span>
             </div>
           </div>
         </div>
-        <div class="navbar-end dark-grey-text is-hidden-touch" id="navbar-items">
+        <div class="navbar-end dark-grey-text is-hidden-touch">
           <div class="navbar-item">
-            <a href="#">Viaja</a>
+            <a href="#travel">Viaja</a>
           </div>
           <div class="navbar-item">
-            <a href="#">Conduce</a>
+            <a href="#drive">Conduce</a>
           </div>
           <div class="navbar-item">
             <a href="#">Iniciar sesión</a>
@@ -37,23 +39,24 @@
       </div>
     </nav>
     <!-- Header, en donde el usuario puede registrarse -->
-    <header class="columns hright padding-both-large" id="header">
-      <div class="column is-two-fifths lab-yellow-bg has-text-white padding-large" id="register">
+    <header id="header" class="columns is-mobile hright padding-both-large">
+      <!-- Contenedor que desaparecerá cuando la pantalla sea más pequeña -->
+      <div id="content-big-screen" class="column is-two-fifths lab-yellow-bg has-text-white general-padding is-hidden-mobile">
         <div class="columns">
           <div class="column">
             <h2 class="is-size-3 has-text-weight-semibold">Disfruta del viaje</h2>
-             <h2 class="is-size-3 has-text-weight-semibold">Eres dueño de tu tiempo</h2>
+            <h2 class="is-size-3 has-text-weight-semibold">Eres dueño de tu tiempo</h2>
           </div>
         </div>
         <div class="columns">
           <div class="column">
             <h3 class="is-size-4 is-inline-block">Viaja con </h3>
-          <img src="assets/images/logoBlanco.png" alt="" id="logo-inside">
+            <img src="assets/images/logoBlanco.png" alt="" id="logo-inside1">
           </div>
-            </div>
+        </div>
         <div class="columns">
           <div class="column">
-              <button class="button is-uppercase">Regístrate</button>
+            <button id="register-btn" class="button is-uppercase" data-toggle="modal" data-target="#register-modal">Regístrate</button>
           </div>
         </div>
         <div class="columns">
@@ -65,46 +68,225 @@
         </div>
         <div class="columns">
           <div class="column">
-              <button class="button">Conviértete en conductor</button>
+            <button class="button">Conviértete en conductor</button>
+          </div>
+        </div>
+      </div>
+        <!-- Contenedor que aparecerá cuando desaparezca el otro -->
+      <div id="content-small-screen" class="column is-four-fifths lab-yellow-bg has-text-white general-padding is-hidden-tablet">
+        <div class="columns">
+          <div class="column">
+            <h3 class="is-size-4 is-inline-block has-text-weight-semibold">Comienza a viajar con <img src="assets/images/logoBlanco.png" alt="" id="logo-inside2"></h3>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <button class="button">Descarga el app</button>
           </div>
         </div>
       </div>
     </header>
     <!-- Llamado a descargar la app -->
-    <section id="travel" class="columns lab-yellow-bg padding-large hleft has-text-white">
-      <div class="column is-four-fifths padding-large">
+    <section id="travel" class="columns lab-yellow-bg general-padding hleft has-text-white has-text-centered-touch">
+      <div id="travel-content" class="column is-four-fifths-desktop general-padding is-12-tablet">
+        <div class="columns is-hidden-desktop">
+          <div class="column">
+            <h3 class="is-size-3">La nueva app</h3>
+          </div>
+        </div>
         <div class="columns">
           <div class="column">
             <figure id="iPhone">
               <img src="assets/images/iPhone6Plus.png" alt="">
             </figure>
           </div>
-          <div class="column padding-large">
+          <div class="column general-padding is-hidden-touch">
             <div class="columns">
               <div class="column">
                 <h3 class="is-size-4 has-text-weight-semibold">Descarga la nueva app</h3>
               </div>
             </div>
             <div class="columns">
-              <div class="column">
+              <div class="column padding-large-right line-height">
                 <p class="is-size-5">La versión actualizada de LabCar está llena de nuevas funciones para llegar a dónde quieras aún más fácil y rápido.</p>
               </div>
             </div>
             <div class="columns">
-              <div class="column">
+              <div class="column padding-large-right line-height">
                 <p class="is-size-5">Con sólo tocar un botón, un auto llega justo a tu ubicación. Súbete y no te preocupes: tu conductor sabe exactamente dónde ir.</p>
               </div>
             </div>
           </div>
         </div>
+        <div class="colums is-hidden-desktop">
+          <div class="column">
+            <p class="is-size-5">Llega a tu destino más rápido</p>
+          </div>
+        </div>
       </div>
     </section>
     <!-- Conduce -->
-    <section class="columns" id="drive"></section>
+    <section class="columns hright" id="drive">
+      <div class="column is-one-third-desktop has-text-white general-padding padding-top-medium">
+        <div class="columns">
+          <div class="column">
+            <h3 class="is-size-4 has-text-weight-semibold">Conduce cuando quieras</h3>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <p>LabCar es una opción flexible para alcanzar tus metas financieras.</p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <button class="button lab-yellow-bg has-text-white">Conviértete en conductor</button>
+          </div>
+        </div>
+        <div class="colums is-hidden-desktop">
+          <div class="column"></div>
+        </div>
+        <div class="colums is-hidden-desktop">
+          <div class="column"></div>
+        </div>
+        <div class="colums is-hidden-desktop">
+          <div class="column"></div>
+        </div>
+      </div>
+    </section>
     <!-- Tarifas -->
-    <section class="columns lab-yellow-bg"></section>
+    <section class="columns lab-yellow-bg general-padding has-text-white" id="rates">
+      <div class="column">
+        <div class="columns">
+          <div class="column">
+            <h3 class="is-size-4 has-text-weight-semibold">Tarifas</h3>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <p>Consulta las tarifas LabCar <a href="#">aquí</a></p>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <div class="control vcenter">
+                <span class="fa fa-map-marker padding-right-small" aria-hidden="true"></span>
+                <input type="text" class="input transparent border-transparent" placeholder="Ingrese su punto de partida">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column">
+            <div class="field">
+              <div class="control vcenter">
+                <span class="fa fa-map-marker padding-right-small" aria-hidden="true"></span>
+                <input type="text" class="input transparent border-transparent" placeholder="Ingrese su punto destino">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column hcenter">
+            <button class="button is-uppercase">Trazar ruta</button>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3959.187663887484!2d-70.63176542892593!3d-33.44235714221835!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1512475559715" allowfullscreen id="map"></iframe>
+      </div>
+    </section>
     <!-- Footer, duh -->
-    <footer id="footer" class="columns dark-grey-bg"></footer>
+    <footer id="footer" class="dark-grey-bg has-text-white general-padding">
+      <div class="columns">
+        <div class="column">
+          <img src="assets/images/logoBlanco.png" alt="">
+          <hr>
+        </div>
+      </div>
+      <!-- Estas columnas desaparecerán cuando se achique la pantalla -->
+      <div class="columns align-bottom is-hidden-touch">
+        <div class="column">
+          <a href=""><span class="fa fa-facebook padding-right-xs"></span></a>
+          <a href=""><span class="fa fa-twitter padding-right-xs"></span></a>
+          <a href=""><span class="fa fa-linkedin padding-right-xs"></span></a>
+          <a href=""><span class="fa fa-apple padding-right-xs"></span></a>
+          <a href=""><span class="fa fa-play"></span></a>
+        </div>
+        <div class="column">
+          <ul>
+            <li><a href="#">Viaja</a></li>
+            <li><a href="#">Conduce</a></li>
+            <li><a href="#">Ciudades</a></li>
+            <li><a href="#">Entregas</a></li>
+            <li><a href="#">¿Cómo funciona?</a></li>
+            <li><a href="#">Países</a></li>
+            <li><a href="#">Seguridad</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <ul>
+            <li><a href="#">Oportunidades</a></li>
+            <li><a href="#">Nuestra historia</a></li>
+            <li><a href="#">API de LabCar</a></li>
+            <li><a href="#">Eventos</a></li>
+            <li><a href="#">Desarrolladores</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Laboratoria</a></li>
+            <li><a href="#">Coders</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <img src="assets/images/appstore.png" alt="">
+          <img src="assets/images/enBadgeWebGeneric.png" alt="">
+        </div>
+      </div>
+      <!-- Y esta aparecera en su lugar -->
+      <div class="columns is-mobile is-hidden-desktop">
+        <div class="column">
+          <ul>
+            <li><a href="#">Viaja</a></li>
+            <li><a href="#">Conduce</a></li>
+            <li><a href="#">Ciudades</a></li>
+            <li><a href="#">Entregas</a></li>
+            <li><a href="#">¿Cómo funciona?</a></li>
+            <li><a href="#">Países</a></li>
+            <li><a href="#">Seguridad</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="column">
+          <div class="colums">
+            <div class="column">
+              <a href=""><span class="fa fa-facebook padding-right-xs"></span></a>
+              <a href=""><span class="fa fa-twitter padding-right-xs"></span></a>
+              <a href=""><span class="fa fa-linkedin padding-right-xs"></span></a>
+              <a href=""><span class="fa fa-apple padding-right-xs"></span></a>
+              <a href=""><span class="fa fa-play"></span></a>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <figure><img src="assets/images/appstore.png" alt=""></figure>
+              <figure><img src="assets/images/enBadgeWebGeneric.png" alt=""></figure>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <hr>
+          <p>© 2017 LabCar Technologies Inc.</p>
+        </div>
+      </div>
+    </footer>
+    <div id="register-modal" class="invisible">
+      <div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, adipisci eveniet distinctio, nulla tenetur sunt nam optio numquam facilis, quo porro incidunt recusandae nisi quidem suscipit sint repudiandae deserunt. Reiciendis.</p>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.js"></script>

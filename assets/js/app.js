@@ -30,3 +30,10 @@ $(window).scroll(function() {
     $("#logo1").removeClass("invisible");
   }
 });
+
+/* Abre el modal de registro */
+$(document).ready(function(){
+    $("#register-btn").click(function(){
+        $("#register-modal").modal();
+    });
+});

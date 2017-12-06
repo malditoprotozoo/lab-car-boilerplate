@@ -5,6 +5,14 @@ body {
   line-height: 1;
 }
 
+a {
+  color: white;
+}
+
+a:hover {
+  color: #F7B617!important;
+}
+
 /* Algunos colores que estaré usando
 y que no están incluidos en el framework */
 
@@ -24,12 +32,33 @@ y que no están incluidos en el framework */
   color: #2B2B2B;
 }
 
+.transparent {
+  background-color: transparent;
+}
+
+.border-transparent {
+  border: 1px solid white;
+}
+
+.input::-webkit-input-placeholder {  
+  color: white; 
+} 
+.input::-moz-placeholder {   
+  color: white; 
+} 
+.input:-ms-input-placeholder {    
+  color: white;
+} 
+.input:-moz-placeholder {    
+  color: white; 
+}
+
 /* Etiqueta temporal para ver la ubicación de las 
 columnas */
 
-/* .column {
+.column {
   border: 1px solid black;
-} */
+}
 
 /* Líneas al lado del texto */
 
@@ -63,11 +92,29 @@ columnas */
   justify-content: flex-start;
 }
 
+.align-bottom {
+  display: flex;
+  align-items: flex-end;
+}
+
+
 /* Padding y márgenes */
+
+.padding-right-xs {
+  padding-right: 1em;
+}
+
+.general-padding {
+  padding: 2.5em;
+}
 
 .padding-both-small {
   padding-top: 2em;
   padding-bottom: 2em;
+}
+
+.padding-right-small {
+  padding-right: 2em;
 }
 
 .padding-top-small {
@@ -91,8 +138,37 @@ columnas */
   padding-bottom: 10em;
 }
 
-.padding-large {
-  padding: 2.5em;
+.padding-general-large {
+  padding: 10em;
+}
+
+.padding-top-medium {
+  padding-top: 5em;
+}
+
+.padding-bottom-medium {
+  padding-bottom: 5em;
+}
+
+.padding-both-medium {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.padding-general-medium {
+  padding: 5em;
+}
+
+.padding-large-left {
+  padding-left: 5em;
+}
+
+.padding-large-right {
+  padding-right: 5em;
+}
+
+.line-height {
+  line-height: 1.5;
 }
 
 /* Invisibiliza elementos */
@@ -117,6 +193,14 @@ columnas */
   color: white;
 }
 
+.shrink a:hover {
+  color: #F7B617;
+}
+
+.shrink .fa {
+  color: white;
+}
+
 #header {
   background-image: url("../images/taxi.jpg");
   background-size: cover;
@@ -133,18 +217,73 @@ columnas */
   background-repeat: no-repeat;
 }
 
+#drive .is-one-third-desktop {
+  background-color: rgba(8, 0, 20, 0.68);
+}
+
+#drive button {
+  border: none;
+}
+
+#rates {
+  margin-bottom: 0;
+}
+
 #footer {
   margin-bottom: 0;
 }
 
-#logo-inside {
+#logo-inside1 {
   height: 1.2em;
   margin-bottom: -1px;
   margin-left: 3px;
 }
 
-#travel {
-  padding-left: 0;
+#logo-inside2 {
+  height: 0.9em;
+  margin-bottom: -2px;
 }
+
+#travel-content {
+  border: 2px solid #fce4ab;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border: 5px solid transparent; 
+  outline: 2px solid #fce4ab;
+}
+
+#rates input {
+  width: 80%;
+}
+
+#footer {
+  line-height: 3;
+}
+
+#nav-burger {
+  width: auto;
+  height: auto;
+}
+
 /* Modificaciones para mejorar la experiencia responsive
 que no vienen incluidas en el framework */
+
+@media screen and (min-width: 1023px) {
+
+  #footer {
+    padding: 5em;
+  }
+
+  #travel {
+    padding-left: 0;
+  }
+
+  #drive {
+    padding-bottom: 10em;
+  }
+
+}
