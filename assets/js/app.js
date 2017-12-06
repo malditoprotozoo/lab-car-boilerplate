@@ -1,6 +1,6 @@
 /**
-Función que determina el tamaño del margen superior
-de header 
+* Función que determina el tamaño del margen superior
+* de header 
 */
 
 var navbarHeight = $(".navbar").height();
@@ -17,8 +17,10 @@ $(window).scroll(function() {
   }
 });
 
-/* Función que permite que la barra de navegación se agrande
-o encoja según el scroll */
+/**
+* Función que permite que la barra de navegación se agrande
+* o encoja según el scroll 
+*/
 $(window).scroll(function() {
   if ($(document).scrollTop() > 50) {
     $("#navbar").removeClass("padding-both-small");
@@ -34,7 +36,7 @@ $(window).scroll(function() {
 });
 
 /**
-*
+* Abre y cierra el menu de hamburguesa
 */
 
 $(document).ready(function() {
@@ -47,7 +49,7 @@ $(document).ready(function() {
 * Abre el modal de inicio 
 */
 $(document).ready(function(){
-  $("#login-btn").click(function(){
+  $(".login-btn").click(function(){
     $("#login-modal").modal();
       $("#login-modal").modal({
         fadeDuration: 250
@@ -61,23 +63,18 @@ $(document).ready(function(){
 $(document).ready(function(){
   $("#register-btn").click(function(){
     $("#register-modal").modal();
-      $("#register-modal").modal({
-        fadeDuration: 250
-      });
+    $("#register-modal").modal({
+      fadeDuration: 250
     });
+  });
 });
 
 /**
-Abre el modal de inicio al hacer clic en otro
-botón 
+* Abre el modal de registro de conductor
 */
-$(document).ready(function(){
-  $("#login-link").click(function(){
-    $("#login-modal").modal();
-      $("#login-modal").modal({
-        fadeDuration: 250
-      });
-    });
-});
-
-$.modal.close();
+// $(document).ready(function() {
+//   $("driver-btn").click(function(){
+//     $("#driver-register").modal();
+//     $("")
+//   })
+// })

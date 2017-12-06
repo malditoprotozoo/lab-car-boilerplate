@@ -34,7 +34,7 @@
             <a href="#drive">Conduce</a>
           </div>
           <div class="navbar-item">
-            <a href="#" id="login-btn" data-target="login-register">Iniciar sesión</a>
+            <a href="#" class="login-btn" data-target="login-register">Iniciar sesión</a>
           </div>
         </div>
       </div>
@@ -69,7 +69,7 @@
         </div>
         <div class="columns">
           <div class="column">
-            <button class="button">Conviértete en conductor</button>
+            <button id="driver-btn" class="button">Conviértete en conductor</button>
           </div>
         </div>
       </div>
@@ -331,7 +331,7 @@
     <div id="register-modal" class="modal white-bg">
       <div class="columns">
         <div class="column hcenter">
-          <a href="#" id="login-link" class="button is-black" data-target="login-register">¿Ya tienes una cuenta?</a>
+          <a href="#" class="button is-black login-btn" data-target="login-register">¿Ya tienes una cuenta?</a>
         </div>
       </div>
       <div class="columns">
@@ -420,6 +420,8 @@
         </div>
       </div>
     </div>
+    <!-- Modal de registro de conductor -->
+    <div id="driver-register" class="modal white-bg"></div>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.js"></script>
