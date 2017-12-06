@@ -37,6 +37,12 @@ $(window).scroll(function() {
 *
 */
 
+$(document).ready(function() {
+  $("#nav-burger").click(function() {
+    $("#nav-items-big").toggleClass("is-hidden-touch");
+  })
+});
+
 /**
 * Abre el modal de inicio 
 */
