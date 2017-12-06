@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="assets/css/bulma.css">
     <!-- Íconos de Font Awesome -->
     <link rel="stylesheet" href="assets/fonts/font-awesome/css/font-awesome.css">
+    <!-- Estilos de jQuery Modal -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css"/>
     <!-- Mis estilos -->
     <link rel="stylesheet" href="assets/css/main.css">
-    <script src="https://maps.googleapis.com/maps/api/js"></script>
   </head>
   <body class="is-clipped">
     <!-- Barra de navegación fija -->
@@ -33,7 +34,7 @@
             <a href="#drive">Conduce</a>
           </div>
           <div class="navbar-item">
-            <a href="#">Iniciar sesión</a>
+            <a href="#" id="login-btn" data-target="login-register">Iniciar sesión</a>
           </div>
         </div>
       </div>
@@ -282,9 +283,138 @@
         </div>
       </div>
     </footer>
-    <div id="register-modal" class="invisible">
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, adipisci eveniet distinctio, nulla tenetur sunt nam optio numquam facilis, quo porro incidunt recusandae nisi quidem suscipit sint repudiandae deserunt. Reiciendis.</p>
+
+    <!-- Acá van los modales -->
+    <!-- Modal de login -->
+    <div id="login-modal" class="modal lab-yellow-bg has-text-white">
+      <div class="columns hcenter">
+        <div class="column is-half">
+          <img src="assets/images/user.svg" alt="">
+          <hr>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="text" class="input" placeholder="Username">
+              <span class="icon is-small is-left">
+                <i class="fa fa-user"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="password" class="input" placeholder="Password">
+              <span class="icon is-small is-left">
+                <i class="fa fa-lock"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column hcenter">
+          <a class="button is-uppercase">Log In</a>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <p>¿Olvidaste tu contraseña? Haz clic <a href="#" class="has-text-weight-semibold">aquí</a></p>
+        </div>
+      </div>
+    </div>
+    <!-- Modal de registro -->
+    <div id="register-modal" class="modal white-bg">
+      <div class="columns">
+        <div class="column hcenter">
+          <a href="#" id="login-link" class="button is-black" data-target="login-register">¿Ya tienes una cuenta?</a>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column hcenter">
+          <p class="is-uppercase">O puedes crear una cuenta nueva</p>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control">
+              <input type="text" class="input" placeholder="Nombre">
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <input type="text" class="input" placeholder="Apellido">
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="email" class="input" placeholder="Correo Electrónico">
+              <span class="icon is-small is-left">
+                <i class="fa fa-envelope"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="text" class="input" placeholder="Teléfono">
+              <span class="icon is-small is-left">
+                <i class="fa fa-phone"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="text" class="input" placeholder="Ciudad">
+              <span class="icon is-small is-left">
+                <i class="fa fa-map-marker"></i>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <div class="control has-icons-left">
+              <input type="text" class="input" placeholder="Opcional. Código de invitación">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column">
+          <div class="control">
+            <div class="select">
+              <select>¿Cómo te enteraste de nosotros?</select>
+              <option value="Por Redes Sociales"></option>
+              <option value="Un conocido me habló del app"></option>
+              <option value="Por la televión"></option>
+            </div>
+        </div>
+      </div>
+    </div>
+      <div class="columns">
+        <div class="column">
+          <div class="field">
+            <a class="button is-primary">Enviar</a>
+          </div>
+        </div>
       </div>
     </div>
 
