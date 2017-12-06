@@ -1,5 +1,7 @@
-/* Función que determina el tamaño del margen superior
-de header */
+/**
+Función que determina el tamaño del margen superior
+de header 
+*/
 
 var navbarHeight = $(".navbar").height();
 
@@ -31,7 +33,13 @@ $(window).scroll(function() {
   }
 });
 
-/* Abre el modal de registro */
+/**
+*
+*/
+
+/**
+* Abre el modal de inicio 
+*/
 $(document).ready(function(){
   $("#login-btn").click(function(){
     $("#login-modal").modal();
@@ -41,6 +49,9 @@ $(document).ready(function(){
     });
 });
 
+/** 
+* Abre el modal de registro 
+*/
 $(document).ready(function(){
   $("#register-btn").click(function(){
     $("#register-modal").modal();
@@ -50,6 +61,10 @@ $(document).ready(function(){
     });
 });
 
+/**
+Abre el modal de inicio al hacer clic en otro
+botón 
+*/
 $(document).ready(function(){
   $("#login-link").click(function(){
     $("#login-modal").modal();
