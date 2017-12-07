@@ -50,11 +50,10 @@ $(document).ready(function() {
 */
 $(document).ready(function(){
   $(".login-btn").click(function(){
-    $("#login-modal").modal();
-      $("#login-modal").modal({
-        fadeDuration: 250
-      });
+    $("#login-modal").modal({
+      fadeDuration: 250
     });
+  });
 });
 
 /** 
@@ -62,7 +61,6 @@ $(document).ready(function(){
 */
 $(document).ready(function(){
   $("#register-btn").click(function(){
-    $("#register-modal").modal();
     $("#register-modal").modal({
       fadeDuration: 250
     });
@@ -72,9 +70,10 @@ $(document).ready(function(){
 /**
 * Abre el modal de registro de conductor
 */
-// $(document).ready(function() {
-//   $("driver-btn").click(function(){
-//     $("#driver-register").modal();
-//     $("")
-//   })
-// })
+$(document).ready(function() {
+  $(".driver-btn").click(function(){
+    $("#driver-register").modal({
+      fadeDuration: 250
+    });
+  });
+});

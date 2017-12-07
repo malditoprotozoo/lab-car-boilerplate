@@ -288,6 +288,14 @@ columnas */
   -webkit-transition: all 0.5s ease-in-out;
 }
 
+#driver-register a {
+  color: #00d1b2;
+}
+
+#driver-register a:hover {
+  color: black!important;
+}
+
 /* Modificaciones para mejorar la experiencia responsive
 que no vienen incluidas en el framework */
 

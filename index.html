@@ -69,7 +69,7 @@
         </div>
         <div class="columns">
           <div class="column">
-            <button id="driver-btn" class="button">Conviértete en conductor</button>
+            <button class="button driver-btn">Conviértete en conductor</button>
           </div>
         </div>
       </div>
@@ -141,7 +141,7 @@
         </div>
         <div class="columns">
           <div class="column">
-            <button class="button lab-yellow-bg has-text-white">Conviértete en conductor</button>
+            <button class="button driver-btn lab-yellow-bg has-text-white">Conviértete en conductor</button>
           </div>
         </div>
         <div class="colums is-hidden-desktop">
@@ -421,7 +421,80 @@
       </div>
     </div>
     <!-- Modal de registro de conductor -->
-    <div id="driver-register" class="modal white-bg"></div>
+    <div id="driver-register" class="modal white-bg">
+      <div class="field">
+        <label for="" class="label">¿Tienes vehículo de 4 puertas?</label>
+        <div class="control">
+          <div class="select">
+            <select name="" id="">
+              <option value="">Sí</option>
+              <option value="">No</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="" class="label">¿Cuál es la marca de tu vehículo</label>
+        <div class="control">
+          <div class="select">
+            <select name="" id="">
+              <option value="">Stark Inc.</option>
+              <option value="">Wayne Inc.</option>
+              <option value="">Volkswagen</option>
+              <option value="">Patriot</option>
+              <option value="">Powell Motors</option>
+            </select>
+          </div>
+          <p class="help">¿No ves tu vehículo en la lista? Envía un correo electrónico a <a href="mailto:conductores@labcar.com<">conductores@labcar.com</a></p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="" class="label">Modelo</label>
+        <div class="control">
+          <div class="select">
+            <select name="" id="">
+              <option value="">Modelo 1</option>
+              <option value="">Modelo 2</option>
+              <option value="">Modelo 3</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="" class="label">Año</label>
+        <div class="control">
+          <div class="select">
+            <select name="" id="">
+              <option value="">2017</option>
+              <option value="">2016</option>
+              <option value="">2015</option>
+              <option value="">2014</option>
+              <option value="">2013</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="field">
+        <label for="" class="label">Número de la Matrícula</label>
+        <div class="control">
+          <input type="text" class="input" placeholder="Matrícula">
+          <p class="help">La información de la matrícula ayuda a los clientes a identificar tu vehículo.</p>
+        </div>
+      </div>
+      <div class="field">
+        <label for="" class="label">Ingresa tu e-mail</label>
+        <div class="control has-icons-left">
+          <input type="text" class="input" placeholder="E-mail">
+          <span class="icon is-small is-left">
+            <i class="fa fa-envelope"></i>
+          </span>
+          <p class="help">Nos comunicaremos contigo a la brevedad.</p>
+        </div>
+      </div>
+      <div class="field">
+        <a class="button is-primary is-outlined">Enviar</a>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.2.1.js"></script>
